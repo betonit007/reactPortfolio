@@ -3,22 +3,22 @@ import { HashLink } from 'react-router-hash-link';
 
 const Navbar = () => {
   return (
-    <>
+    <div className=''>
       <ul className="flex">
         <li className="mr-6">
-          <HashLink smooth to="/contact#hi">Active</HashLink>
+          <HashLink smooth to="/#about">Home</HashLink>
         </li>
         <li className="mr-6">
-        <HashLink smooth to="/contact#hello">Active</HashLink>
+        <HashLink smooth to="/#portfolio">Portfolio</HashLink>
         </li>
         <li className="mr-6">
-        <HashLink smooth to="/contact#ollah">Active</HashLink>
+        <HashLink smooth to="/#contact">Contact</HashLink>
         </li>
         <li className="mr-6">
-        <HashLink smooth to="/contact#hey">Active</HashLink>
+        <HashLink smooth to="/#extra">Extra</HashLink>
         </li>
       </ul>
-    </>
+    </div>
   )
 }
 
