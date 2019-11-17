@@ -13,6 +13,7 @@ const Main = () => {
     setinView(arg);
     if (!arg) {
       navBarWatch.disconnect();
+      navBarWatch.observe(document.querySelector("#about"))
     }
   }
 
