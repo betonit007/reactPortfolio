@@ -1,9 +1,10 @@
 import React from 'react';
 import { HashLink } from 'react-router-hash-link';
 
-const Navbar = () => {
+const Navbar = ({ inView }) => {
+  
   return (
-    <div className=''>
+    <div id='nav' className={!inView ? 'bg-white w-full fixed z-10 top-0' : 'bg-white w-full'}>
       <ul className="flex">
         <li className="mr-6">
           <HashLink smooth to="/#about">Home</HashLink>

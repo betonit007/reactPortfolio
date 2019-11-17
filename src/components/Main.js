@@ -7,32 +7,34 @@ import Extra from './Extra';
 
 const Main = () => {
 
+  const [inView, setinView] = useState(null);
+
+  const setNavBarStill = (arg) => {
+    setinView(arg);
+    if (!arg) {
+      navBarWatch.disconnect();
+    }
+  }
+
+  const navBarWatch = new IntersectionObserver(([entries]) => {  // class IntersectionObserver monitors targeted div (#nav) to see if it intersects viewport
+    setNavBarStill(entries.isIntersecting)
+  }, { threshold: [0] })
+
   useEffect(() => {
-    const whatIDo = document.getElementById('extra');
-    elementInViewport(whatIDo);
-
-    // console.log(whatIDo)
-    // whatIDo.scrollIntoView();
-
-    // window.addEventListener("scroll", () => console.log(Navbar.body.scrollIntoView));
+    // observing a target element
+    navBarWatch.observe(document.querySelector("#nav"));
   }, [])
 
-  const elementInViewport = (el) => {
-    var top = el.offsetTop;
-    var left = el.offsetLeft;
-    var width = el.offsetWidth;
-    var height = el.offsetHeight;
-     
-    console.log( top, left, width, height );
-    }
   
 
-  const [ scrolledTo, setScrolledTo ] = useState(false);
 
   return (
     <>
+      
       <AboutMe />
-      <Navbar />
+      <Navbar 
+       inView={inView}
+      />
       <Portfolio />
       <ContactMe />
       <Extra />
