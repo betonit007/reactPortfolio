@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+
 import AboutMe from './AboutMe';
 import Navbar from './Navbar';
 import ContactMe from './ContactMe';
@@ -26,16 +27,14 @@ const Main = () => {
     navBarWatch.observe(document.querySelector("#nav"));
   }, [])
 
-  
+
 
 
   return (
     <>
-      
+
       <AboutMe />
-      <Navbar 
-       inView={inView}
-      />
+      <Navbar inView={inView} />
       <Portfolio />
       <ContactMe />
       <Extra />

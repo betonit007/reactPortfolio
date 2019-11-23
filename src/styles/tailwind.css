@@ -60,3 +60,90 @@
   * @import "utilities/background-patterns";
   * @import "utilities/skew-transforms";
   */
+
+  /* Animation (Add After) */
+
+  .navAnima {
+    -webkit-animation-name: navBar; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    animation-name: navBar;
+    animation-duration: 2s;
+  }
+  
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes navBar {
+    from {background-color: white;}
+    to {background-color: yellow;}
+  }
+  
+  /* Standard syntax */
+  @keyframes navBar {
+    from {background-color: white;}
+    to {background-color: yellow;}
+  }
+
+  @media (max-width: 640px) {
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    .customHeight {
+        height: 40vh;
+    }
+  
+  }
+
+  @media (min-width: 640px) {
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    .customHeight {
+        height: 50vh;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    .customHeight {
+        height: 60vh;
+    }
+  }
+  
+@media (min-width: 1024px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .customHeight {
+    height: 70vh;
+  }
+}
+  
+  @media (min-width: 1280px) {
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    .customHeight {
+        height: 75vh;
+    }
+  }
