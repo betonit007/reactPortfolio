@@ -8408,6 +8408,16 @@ video {
 
 /* Animation (Add After) */
 
+.homeBg {
+  background: linear-gradient(to right, rgb(255, 255, 255), rgb(68, 166, 187));
+}
+
+.c {
+  position: absolute;
+  cursor: pointer;
+  will-change: transform, opacity;
+}
+
 .navAnima {
   -webkit-animation-name: navBar; /* Safari 4.0 - 8.0 */
   -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */

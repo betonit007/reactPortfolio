@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Main from './components/Main';
 
 function App() {
+  
 
   return (
     <>
@@ -11,7 +12,6 @@ function App() {
           <Route path='/' component={Main} />
         </Switch>
       </Router>
-
     </>
   );
 }

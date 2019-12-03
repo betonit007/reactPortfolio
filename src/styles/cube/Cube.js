@@ -11,7 +11,7 @@ const Cube = () => {
                 <div className="top"></div>
                 <div className="bottom"></div>
                 <div className="left flex items-center justify-end"> 
-                  <img className='w-32 h-32' src={plane} />
+                  <img className='w-32 h-32' alt='rotating airplane' src={plane} />
                 </div>
                 <div className="right"></div>
             </div>

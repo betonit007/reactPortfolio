@@ -5,17 +5,10 @@ import cloud from '../styles/images/cloud.png'
 
 const AboutMe = () => {
 
-    const styles = {
-    
-        backgroundImage: `url(${cloud}`,
-        backgroundPosition: '0px 0px',
-        backgroundRepeat: 'repeat-x',
-    
-        animation: 'animatedBackground 40s linear infinite'
-    }
+
 
     return (
-        <div id='about' style={styles} className="h-screen flex justify-center pb-2">
+        <div id='about' className="h-screen flex justify-center homeBg">
            <Cube />
         </div>
     )
