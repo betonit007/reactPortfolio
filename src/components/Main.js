@@ -20,7 +20,7 @@ const Main = () => {
 
   const navBarWatch = new IntersectionObserver(([entries]) => {  // class IntersectionObserver monitors targeted div (#nav) to see if it intersects viewport
     setNavBarStill(entries.isIntersecting)
-  }, { threshold: [0] })
+  }, { threshold: [1] })
 
   useEffect(() => {
     // observing a target element

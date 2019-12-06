@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useSpring, animated as a } from 'react-spring';
 
-const ProjectCard = ({ img, name, gitLink, projLink }) => {
-
+const ProjectCard = ({item: { Description, deployedLink, githubUrl, imgUrl , projectName}}) => {
+  
   const [testBool, setTestBool] = useState(false);
 
   // const contentProps = useSpring({
@@ -32,12 +32,12 @@ const ProjectCard = ({ img, name, gitLink, projLink }) => {
 
     <div className="h-64 w-64 flex overflow-hidden" onMouseLeave={() => changeBoolState()} onMouseEnter={() => changeBoolState()} >
       <a.div className='c w-64 h-64 bg-norepeat bg-cover ' style={{ opacity: opacity.interpolate(o => 1 - o), transform }}>
-        <img className='h-64 w-64' src={img} alt={name}/>
+        <img className='h-64 w-64' src={imgUrl} alt={projectName}/>
         </a.div>
       <a.div className='c w-64 h-64 bg-yellow-400' style={{ opacity, transform: transform.interpolate(t => `${t} rotateX(180deg)`) }} >
-        <div className="text-xl">{name}</div>
-        <a href={gitLink} target='_blank' rel="noopener noreferrer">Project Link</a>
-        <a href={projLink} target='_blank' rel="noopener noreferrer">Github Link</a>
+        <div className="text-xl">{projectName}</div>
+        <a href={githubUrl} target='_blank' rel="noopener noreferrer">Project Link</a>
+        <a href={deployedLink} target='_blank' rel="noopener noreferrer">Github Link</a>
       </a.div>
     </div>
 
