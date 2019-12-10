@@ -27,7 +27,7 @@ const ProjectCard = ({item: { Description, deployedLink, githubUrl, imgUrl , pro
   const changeBoolState = () => {
     setTestBool(!testBool);
   }
-
+  
   return (
 
     <div className="h-64 w-64 flex overflow-hidden" onMouseLeave={() => changeBoolState()} onMouseEnter={() => changeBoolState()} >
