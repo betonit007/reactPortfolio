@@ -8,7 +8,7 @@ const Portfolio = () => {
   const [pFilter, setPFilter] = useState('A');
 
   return (
-    <div id='portfolio' className="h-screen bg-green-300 pt-12">
+    <div id='portfolio' className="h-screen bg-green-300 pt-12 overflow-hidden">
       <div className="w-full flex justify-around w-5/6">
         <div className="cursor-pointer" onClick={() => setPFilter('A')}>All</div>
         <div className='cursor-pointer' onClick={() => setPFilter('Node')}>Node.js</div>
@@ -24,7 +24,7 @@ const Portfolio = () => {
           leave={{ position: 'absolute', opacity: 0, marginTop: -500 }}
         >
           {pFilter =>
-            props => <div className='flex flex-wrap justify-center' style={props}>
+            props => <div className={`${pFilter === 'A' ? 'grid': 'flex-wrap'} flex self-center justify-center w-full pb-12`} style={props}>
               {allProjects.filter(p => p.Description.includes(pFilter)).map(p => <ProjectCard item={p} />)}
             </div>
           }
@@ -33,7 +33,7 @@ const Portfolio = () => {
     </div>
 
   )
-
+  
 }
 
 export default Portfolio

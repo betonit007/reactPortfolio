@@ -8409,7 +8409,7 @@ video {
 /* Animation (Add After) */
 
 .homeBg {
-  background: linear-gradient(to right, rgb(255, 255, 255), rgb(101, 170, 235));
+  background: linear-gradient(to right, rgb(184, 225, 248), rgb(87, 166, 240));
 }
 
 .c {
@@ -8441,9 +8441,10 @@ video {
 
 @media (max-width: 640px) {
   .grid {
+    max-width: 550px;
     display: grid;
-    grid-template-columns: 1fr;
-    justify-content: space-between;
+    grid-template-columns: 1fr 1fr;
+    /* justify-content: space-between; */
     flex-wrap: wrap;
     width: 100%;
   }
@@ -8455,9 +8456,10 @@ video {
 
 @media (min-width: 640px) {
   .grid {
+    max-width: 550px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: space-between;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* justify-content: space-between; */
     flex-wrap: wrap;
     width: 100%;
   }
@@ -8469,9 +8471,10 @@ video {
 
 @media (min-width: 768px) {
   .grid {
+    max-width: 860px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     flex-wrap: wrap;
     width: 100%;
   }
@@ -8483,9 +8486,10 @@ video {
 
 @media (min-width: 1024px) {
   .grid {
+    max-width: 860px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-content: space-between;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* justify-content: space-between; */
     flex-wrap: wrap;
     width: 100%;
   }
@@ -8497,9 +8501,10 @@ video {
 
 @media (min-width: 1280px) {
   .grid {
+    max-width: 860px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    justify-content: space-between;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* justify-content: space-between; */
     flex-wrap: wrap;
     width: 100%;
   }
