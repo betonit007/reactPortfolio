@@ -9,13 +9,8 @@ const Portfolio = () => {
 
   return (
     <div id='portfolio' className="h-screen bg-green-300 pt-12">
-<<<<<<< HEAD
-      <div className="w-full flex justify-around">
-        <div className="cursor-pointer" onClick={() => setPFilter(!pFilter)}>All</div>
-=======
       <div className="w-full flex justify-around w-5/6">
         <div className="cursor-pointer" onClick={() => setPFilter('A')}>All</div>
->>>>>>> fixed-projectcard
         <div className='cursor-pointer' onClick={() => setPFilter('Node')}>Node.js</div>
         <div className='cursor-pointer' onClick={() => setPFilter('javascript')}>Javascript</div>
         <div className='cursor-pointer' onClick={() => setPFilter('jquery')}>JQuery</div>
