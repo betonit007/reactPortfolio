@@ -8,7 +8,6 @@ const Navbar = ({ inView }) => {
 
 
   const divWatch = new IntersectionObserver(([entries]) => {  // class IntersectionObserver monitors targeted div (#nav) to see if it intersects viewport
-    console.log(entries.target.id);
     switch (entries.target.id) {
       case 'extra':
         setDiv('extra')
@@ -35,30 +34,34 @@ const Navbar = ({ inView }) => {
   //   setScrolled(val)
   // }
 
-  const navAnimation = useSpring({
-    to: async (next, cancel) => {
-      await next({
-        position: inView ? 'static' : 'sticky',
-        top: -100,
-        zIndex: 10
-      })
-      await next({
-        top: 0,
-        config: {
-          mass: 5,
-          tension: 50,
-          friction: 50,
-          delay: 50,
-          duration: 400
-        }
-      })
+  // const navAnimation = useSpring({
+  //   to: async (next, cancel) => {
+  //     await next({
+  //       position: inView ? 'static' : 'sticky',
+  //       top: -100,
+  //       zIndex: 10
+  //     })
+  //     await next({
+  //       top: 0,
+  //       config: {
+  //         mass: 5,
+  //         tension: 50,
+  //         friction: 50,
+  //         delay: 50,
+  //         duration: 100
+  //       }
+  //     })
 
-    }
-  });
+  //   }
+  // });
 
   return (
 
-    <a.div id='nav' style={navAnimation} className='bg-white w-full h-12 p-2'>
+    // <a.div id='nav' style={navAnimation} className='bg-white w-full h-12 p-2'>
+      <div id="nav" className={`h1 p2 border italic
+      ${color}
+      ${isActive && 'bold'}
+    `}>
       <ul className="flex">
         <li className="mr-6">
           <HashLink smooth to="/#about">Home</HashLink>
@@ -73,7 +76,8 @@ const Navbar = ({ inView }) => {
           {divView === 'extra' ? <div className='text-red-700'>Extra</div> : <HashLink smooth to="/#extra">Extra</HashLink>}
         </li>
       </ul>
-    </a.div>
+    </div>
+    //</a.div>
   )
 }
 
