@@ -12,8 +12,8 @@ const Navbar = ({ inView }) => {
       case 'extra':
         setDiv('extra')
         break;
-      case 'about':
-        setDiv('about')
+      case 'portfolio':
+        setDiv('portfolio')
         break;
       case 'contact':
         setDiv('contact')
@@ -21,13 +21,13 @@ const Navbar = ({ inView }) => {
       default:
         setDiv(true)
     }
-  }, { threshold: [.97] })
+  }, { threshold: [.80] })
 
   useEffect(() => {
     // window.addEventListener('scroll', handleScroll);
     divWatch.observe(document.querySelector("#extra"));
-    divWatch.observe(document.querySelector("#about"));
     divWatch.observe(document.querySelector("#contact"));
+    divWatch.observe(document.querySelector("#portfolio"));
   }, [])
 
   // const handleScroll = (val = true) => {
@@ -58,16 +58,13 @@ const Navbar = ({ inView }) => {
   return (
 
     // <a.div id='nav' style={navAnimation} className='bg-white w-full h-12 p-2'>
-      <div id="nav" className={`h1 p2 border italic
-      ${color}
-      ${isActive && 'bold'}
-    `}>
+      <div id="nav" className={`${!inView ? 'navAnima sticky z-10 top-0' : ''} bg-white w-full h-12 p-2`}>
       <ul className="flex">
         <li className="mr-6">
           <HashLink smooth to="/#about">Home</HashLink>
         </li>
         <li className="mr-6">
-          {divView === 'about' ? <div className="text-red-700">Projects</div> : <HashLink smooth to="/#portfolio">Projects</HashLink>}
+          {divView === 'portfolio' ? <div className="text-red-700">Projects</div> : <HashLink smooth to="/#portfolio">Projects</HashLink>}
         </li>
         <li className="mr-6">
           {divView === 'contact' ? <div className="text-red-700">Contact</div> : <HashLink smooth to="/#contact">Contact</HashLink>}
