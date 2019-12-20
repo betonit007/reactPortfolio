@@ -32,7 +32,6 @@ const Main = () => {
 
   return (
     <>
-
       <AboutMe />
       <Navbar inView={inView} />
       <Portfolio />
