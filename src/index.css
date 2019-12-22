@@ -8420,9 +8420,9 @@ video {
 
 .navAnima {
   -webkit-animation-name: navBar; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
   animation-name: navBar;
-  animation-duration: 2s;
+  animation-duration: 1s;
 }
 
 /* Safari 4.0 - 8.0 */
@@ -8436,6 +8436,34 @@ video {
 
   to {
     background-color: yellow;
+  }
+}
+
+.mChange {
+  -webkit-animation-name: menuChange; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+  animation-name: menuChange;
+  animation-duration: 1s;
+  padding: 0 6px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  background-color: black;
+  color: white;
+}
+
+/* Safari 4.0 - 8.0 */
+
+/* Standard syntax */
+
+@keyframes menuChange {
+  from {
+    background-color: white;
+  }
+
+  to {
+    background-color: black;
+    color: white;
   }
 }
 
